@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles.css">
+    <title>Pagina Inicial</title>
+</head>
+<body>
+    <div id="container">
+       <h1>Formulario 2 Edição<h1>
+        <h2>
+            Seja Bem - Vindo(a) ao primeiro desafio da aula de Front - End do Let´s Dev!
+        </h2>  
+       
+    <p id="instrucao">
+       Preencha corretamente os campos abaixo para ingressar nessa SUPER JORNADA com o time Paipe!
+    </p>
+
+    <img src="imagem/img-Let´s Dev.jpeg" alt="Imagem Let´s Dev">
+    <hr>
+
+    <!-- Aqui começa os items agrupados em coluna -->
+    <form onsubmit="enviarformulario()">
+        <p id="aviso">
+            <strong>ATENÇÃO:</strong> os campos contendo os astericos (*) são de 
+            preenchimento obrigatorio!
+        </p>
+    
+        <!-- Aqui começa os inputs de digitação -->
+        <div class="row">
+            <div class="column-input input-text">
+                <label>Nome Completo: *</label>
+                <input type="text"
+                       name="nome"
+                       placeholder="Digite seu nome aqui"
+                       required>
+            </div>
+            <div class="column-input">
+                 <label>Idade:</label>
+                 <input type="number" name="Idade" placeholder="Digite sua Idade aqui">
+            </div>
+        </div>
+        <!-- Aqui começa os inputs de seleção -->
+        <div class="row">
+            <div class="column-input select">
+                <label>Ocupação:</label>
+                <select name="Ocupação">
+                    <option>Selecione sua Ocupação</option>
+                    <option>Estudante</option>
+                    <option>Trabalhador CLT</option>
+                    <option>Autônomos</option>
+                    <option>Outros</option>
+                </select>
+            </div>
+            <!--Aqui começa os inputs de seleção-->
+            <div class="column-input">
+               <label>Área de preferência:</label>
+               <div class="row" style="gap: 25px;">
+                <div class="row selectors">
+                   <input 
+                   type="radio"
+                   id="front"
+                   name="area-preferencia"
+                   value="Front-end"
+                   checked
+                   >
+                   <label for="Front">Front-end</label>
+                   <div class="row selectors">
+                   <input 
+                   type="radio"
+                   id="back"
+                   name="area-preferencia"
+                   value="Back-end"
+                   > 
+                   <label for="back">Back-end</label>
+                   <div class="row selectors">
+                   <input 
+                   type="radio"
+                   id="full"
+                   name="area-preferencia"
+                   value="Full stack"
+                   >
+                   <label for="full">Full stack</label>
+                   </div>
+                   </div>
+                </div>
+
+               </div>
+            </div>                               
+        </div>
+
+                    <!--Aqui começa os botões, textarea e checkbox-->
+                    <div class="column-input">
+                        <label>Anexar curriculo:</label>
+                        <input type="file" name="Curriculo">
+                     </div>
+                     <div class="column-input" style="margin-bottom: 50px;">
+                        <label>Descrição de perfil do candidato:</label>
+                         <textarea 
+                         name="descricao-perfil" 
+                         placeholder="Fale um pouco sobre seu perfil pessoal e profissional">
+                         </textarea>
+                     </div>
+
+                     <div class="column-input" style="margin-bottom: 115px;">
+                        <div class="row-selectors">
+                             <input type="checkbox" name="receber-email" id="receber-email">
+                             <label for="receber-email">Deseja receber notificaçoes sobre vagas por e-email</label>
+                        </div>
+                     </div>
+                     <div class="row" style="justify-content: space-between;">
+                        <button onclick="Cancelar()">Cancelar</button>
+                        <input type="submit" value="Enviar">
+                     </div>
+    </form>
+</div>
+</body>
+</html>
