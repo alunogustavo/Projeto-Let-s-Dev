@@ -88,9 +88,9 @@ form label {
     font-weight: 500;
 }
 
-.column-input input [type="text"],
-input [type="number"],
-input [type="submit"],
+.column-input input[type="text"],
+input[type="number"],
+input[type="submit"],
 select,
 textarea,
 button {
@@ -103,7 +103,7 @@ button {
 form .row {
     /* Alinhe Horizoltamente */
     display: flex;
-    width: 100px;
+    width: 100%;
     gap: 60px;
 }
 
